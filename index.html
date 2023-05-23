@@ -6,12 +6,13 @@
   <style>
     * {
       box-sizing: border-box;
+      font-family: Arial, sans-serif;
     }
 
     body {
       margin: 0;
       padding: 0;
-      font-family: Arial, sans-serif;
+      
       background-color: black;
     }
 
@@ -21,70 +22,70 @@
       flex-direction: column;
       align-items: center;
       justify-content: center;
-      height: 100vh;
       
     }
 
     .links {
       display: flex;
-      flex-direction: column;
+      flex-direction: row;
       align-items: center;
       justify-content: center;
-      margin-bottom: 20px;
+      
     }
 
     .link {
       text-decoration: none;
-      color: #fff;
+      color: #000;
       font-weight: bold;
-      background-color: #333;
+      background-color: white;
       padding: 10px 20px;
-      margin-bottom: 10px;
       border-radius: 5px;
+      margin: 10px 6px;
     }
-
+   .links a:hover{
+     opacity: 0.8;
+     scale: 0.93;
+   }
     .video-section {
       width: 90%;
-      max-width: 800px;
-      margin: 0 auto;
-      background-color: #ccc;
-      padding: 20px;
-      text-align: center;
-     
+      height: auto;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin: 20px;
+    
     }
-
-    .video-container {
-      position: relative;
-      padding-bottom: 56.25%;
-      height: 0;
-      overflow: hidden;
-    }
-
-    .video-container video {
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-    }
+.title{
+  font-size: 2rem;
+  display: flex
+  font-family: Sans-Serif;
+}
+.title h3{ 
+  color: white;
+}
+    
   </style>
 </head>
 <body>
   <div class="container">
+    <div class="title"> <h3>Siddhant Singh ™</h3></div>
     <div class="links">
-      <a class="link" href="#">APP</a>
-      <a class="link" href="#">GitHub</a>
-      <a class="link" href="#">LinkedIn</a>
+      <a target="_blank" class="link" href="https://shutterframeio.netlify.app/">APP</a>
+      <a target="_blank" class="link" href="https://github.com/Siddhantsingh1230/ShutterFrameDemoRepo/">GitHub</a>
+      <a target="_blank" class="link" href="https://www.linkedin.com/in/siddhantsingh1230">LinkedIn</a>
     </div>
 
     <div class="video-section">
-      <div class="video-container">
-        <video autoplay controls>
-          <source src="demo.mp4" type="video/mp4">
+     
+        <video id="vid" loop autoplay="true" controls>
+          <source src="vid.mp4" type="video/mp4">
           Your browser does not support the video tag.
         </video>
-      </div>
+      <
     </div>
   </div>
+  <script>
+    document.getElementById('vid').play();
+</script>
 </body>
 </html>
